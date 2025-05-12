@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Formulario/imagenes/imagen-gym.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .form-titulo{
+    color: white;
+    font-size: 35px;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-left: 55px;
+  }
+  .container-page{
+    height: 570px;
+    width: 340px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.8s;
+    background-color:rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+  }
+  .login-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+form{
+    width: 80%;
+    margin: auto;
+}
+
+.input-line-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+}
+.letras{
+    font-size: 15px;
+}
+.input-line{
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #CBCBCB;
+    outline: none;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.boton-registrarse{
+    width: 100%;
+    height: 45px;
+    border-radius: 55px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.btn2{
+    color: white;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.boton-registrarse:hover{
+    opacity: 1;
+
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Formulario/registro.css">
+</head>
+<body>
+    
+    <div class="container-page" id="container">
+        <div class="login-container" id="loginContainer" >
+      <form action="" class="form" id="form"  onsubmit="nuevo(this)">
+        <p class="form-titulo"><strong>Registrate</strong></p>
+
+        <div class="input-line-container">
+        <label class="letras" >Nombre:</label>
+          <input name="txtnombre" type="text" class="input-line" id="">
+        </div>
+
+        <div class="input-line-container">
+            <label class="letras" >Apellidos:</label>
+          <input name="txtapellido" type="text" class="input-line" id="">   
+        </div>
+
+        <div class="input-line-container">
+            <label class="letras" >Correo electrónico:</label>
+          <input name="txtemail" type="text" class="input-line" id="">
+        </div>
+
+        <div class="input-line-container">
+            <label class="letras" >Celular:</label>
+          <input name="txtcelular" type="text" class="input-line" id="">
+        </div>
+
+        <div class="input-line-container">
+            <label class="letras" >Contraseña:</label>
+          <input type="password" class="input-line" id="contrasenia">
+        </div>
+
+        <div class="input-line-container">
+            <label class="letras" >Repetir Contraseña:</label>
+          <input type="password" class="input-line" id="repetircontrasenia">
+        </div>
+
+        <div class="">
+            <input type="checkbox" >
+            <label class="letras" >Leí y acepto los </label>
+            <a class="letras" href="#">Términos y Condiciones</a>
+        </div>
+        <div class="boton-registrarse" >
+          <input class="btn2" type="submit" value="Registrate">
+        </div>
+      </form>
+    </div>
+    </div>
+</body>
+<script src="../Formulario/registro.js"></script>
+</html>

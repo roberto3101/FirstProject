@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THENX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="estilo.css">
+
+    <style>
+        .item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .item .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            /* Posicionar la tooltip encima del ítem */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .item .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .item:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--inicio -->
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+                <div class="logo">
+                    <h1>THENX</h1>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="#inicio" onclick="seleccionar()">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sabores" onclick="seleccionar()">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Explora</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#platos" onclick="seleccionar()">
+                                <i class="fa-solid fa-brain"></i>
+                                <span>Tecnicas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog" onclick="seleccionar()">
+                                <i class="fa-solid fa-person-shelter"></i>
+                                <span>Comunidad</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contacto" onclick="seleccionar()">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="+51 938 192 665">
+                        <i class="fa-solid fa-phone"></i>+51 938 192 665
+                    </a>
+                    <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/" rel="noopener noreferrer" target="_blank"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="gallery js-flickity"
+                data-flickity-options='{ "wrapAround":true, "pageDots": false, "autoPlay": true}'>
+                <div class="gallery-cell">
+                    <img src="img/a1.jpg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="img/a2.jpeg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="img/a3.jpg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="img/a4.jpg" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <h2>THENX </h2>
+                <p>Entrenamiento para atletas de elite</p>
+                <button>nuestro blog</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="fecha-hora">
+            <p>Fecha: <span id="fecha"></span></p>
+            <p>Hora: <span id="hora"></span></p>
+        </div>
+    </section>
+
+    <!-- SECCION SABORES -->
+    <section id="sabores">
+        <h2>EXPLORA</h2>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i1.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Espalda</h3>
+                    <p>Mejora postura, previene lesiones, fortalece movimientos cotidianos.</p>
+                </div>
+                <div class="tooltip">Entrenar la espalda es fundamental para fortalecer los músculos dorsales, lo cual
+                    mejora la postura y previene lesiones. Ejercicios como dominadas y remo fortalecen tanto la espalda
+                    superior como la baja, facilitando movimientos cotidianos y deportivos.</div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i2.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Piernas</h3>
+                    <p>Equilibrio, movilidad funcional, protección y capacidad de movimiento.</p>
+                </div>
+                <div class="tooltip">Fortalecer las piernas es esencial para mantener un equilibrio corporal adecuado y
+                    mejorar la movilidad funcional. Ejercicios como sentadillas y lunges no solo incrementan la fuerza y
+                    la resistencia de los músculos de las piernas, sino que también ayudan a proteger las articulaciones
+                    y mejorar la capacidad de realizar movimientos rápidos y explosivos.</div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Hombros</h3>
+                    <p>Estabilidad superior, movimientos fluidos y eficientes en deportes.</p>
+                </div>
+                <div class="tooltip">Los hombros son cruciales para la estabilidad del tren superior y la funcionalidad
+                    del movimiento de los brazos. Entrenar los hombros con ejercicios como press militar y elevaciones
+                    laterales ayuda a fortalecer los deltoides, mejorando la postura, la estabilidad de la articulación
+                    del hombro y la capacidad de realizar movimientos de brazos en todas las direcciones.</div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i4.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Full planche tutorial</h3>
+                    <p>Desafío avanzado, fortalecimiento extremo, control y coordinación total.</p>
+                </div>
+                <div class="tooltip">La técnica de full planche es un ejercicio avanzado que requiere un fuerte
+                    compromiso de la musculatura central y de la parte superior del cuerpo. Practicarla no solo aumenta
+                    la fuerza y la estabilidad del torso y los brazos, sino que también mejora la coordinación y el
+                    control corporal, siendo un logro significativo en el desarrollo físico y la habilidad atlética.
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i5.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Pecho</h3>
+                    <p>Fuerza central, respiración mejorada, empuje en deportes variados.</p>
+                </div>
+                <div class="tooltip">El entrenamiento de pecho es clave para desarrollar la fuerza y la estabilidad del
+                    torso. Ejercicios como flexiones y press de banca no solo fortalecen los músculos pectorales, sino
+                    que también contribuyen a mejorar la función respiratoria y la capacidad de empuje en diversas
+                    actividades físicas.</div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/i6.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Triceps</h3>
+                    <p>Potencia en empuje, mejora estética y rendimiento deportivo.</p>
+                </div>
+                <div class="tooltip">Fortalecer los tríceps es esencial para mejorar la fuerza y la estabilidad del tren
+                    superior, especialmente en movimientos de empuje como flexiones y press de banca. Además, unos
+                    tríceps fuertes contribuyen a la apariencia estética de los brazos y mejoran el rendimiento en
+                    diversas actividades deportivas y cotidianas.</div>
+            </div>
+        </div>
+
+        <button>Ver Más</button>
+    </section>
+
+    <!-- SECCION PLATOS -->
+    <section id="platos">
+        <h2>Tecnicas</h2>
+
+        <div class="fila">
+            <div class="item">
+                <a href="https://youtu.be/IYLxm0T6qls?si=ZSwVr6rrY3u0BlZS" target="_blank">
+                    <img src="img/p1.jpg" alt="">
+                </a>
+                <p>Flexiones</p>
+            </div>
+            <div class="item">
+                <a href="https://youtu.be/q7rCeOa_m58?si=VfduZX1-4GBjt1X1" target="_blank">
+                    <img src="img/p2.jpg" alt="">
+                </a>
+                <p>Sentadillas</p>
+            </div>
+            <div class="item">
+                <a href="https://www.youtube.com/watch?v=QXw3Dn687hE" target="_blank">
+                    <img src="img/p3.jpg" alt="">
+                </a>
+                <p>Pull ups</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="item">
+                <a href="https://youtu.be/KNC5lkoE2Fs?si=PRPy_Ykh1kVr5HXR" target="_blank">
+                    <img src="img/p4.jpg" alt="">
+                </a>
+                <p>Handstand</p>
+            </div>
+            <div class="item">
+                <a href="https://youtu.be/ixmxOlcrlUc?si=J6Jgl7-9BaWM0KtC" target="_blank">
+                    <img src="img/p5.jpg" alt="">
+                </a>
+                <p>full planche</p>
+            </div>
+            <div class="item">
+                <a href="https://www.youtube.com/watch?v=KsZS0uXFPos&t=837s" target="_blank">
+                    <img src="img/p6.jpg" alt="">
+                </a>
+                <p>Hefesto</p>
+            </div>
+        </div>
+
+        <button>Ver Más</button>
+    </section>
+
+    <button>Ver Más</button>
+    </section>
+
+    <!-- SECCION BLOG -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="galeria-blog js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": true}'>
+            <div class="gallery-cell">
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/h1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Mi experiencia</h3>
+                        <p>"THENX me ayudó a lograr fuerza y confianza que nunca pensé posible mediante calistenia."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/h2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Mi vida cambió</h3>
+                        <p>"Entrenar calistenia con THENX mejoró mi salud y bienestar físico de manera increíble."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/h3.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>el poder del cardio</h3>
+                        <p>"Gracias a THENX y la calistenia, transformé mi cuerpo y mentalidad hacia la grandeza."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>Leer Más</button>
+    </section>
+
+    <!-- SECCION CONTACTO Y PIE DE PAGINA -->
+    <section id="contacto">
+        <div class="fila">
+            <div class="col">
+                <h1>THENX</h1>
+            </div>
+            <div class="col">
+                <h3>Menú</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#sabores">Explora</a>
+                <a href="#sabores">Tecnicas</a>
+                <a href="#sabores">Comunidad</a>
+            </div>
+            <div class="col">
+                <h3>Testimonios</h3>
+                <a href="#">Chris Heria</a>
+                <a href="#">Vadym cavalera</a>
+                <a href="#">Johnny</a>
+            </div>
+            <div class="col">
+                <h3>Social Media</h3>
+                <div class="media">
+                    <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
+                </div>
+                <div class="media">
+                    <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Contacto</h3>
+                <input type="text" placeholder="Tu correo">
+                <input type="submit" class="enviar">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botonBlog = document.querySelector('.info button');
+            botonBlog.addEventListener('click', function () {
+                window.location.href = '../Blog/blog.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

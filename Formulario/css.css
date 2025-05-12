@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('img/wp4716004.webp')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2em;
+    color: whitesmoke;
+    text-align: center;
+}
+.inputbox{
+position: relative;  
+margin: 30px 0;
+width: 310px;
+border-bottom: 2px solid whitesmoke ;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: whitesmoke;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{
+     width: 100%;
+     height: 50px;
+     background: transparent;
+     border: none;
+     font-size: 1em;
+     padding: 0 35px 0 5px;
+     color: whitesmoke;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: white;
+    font-size: 1.2em;
+    top:  20px;
+}
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.forget label input{
+margin-right: 3px;
+}
+
+.forget label a{
+    color: white;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: whitesmoke;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+font-size: .9em;
+color: whitesmoke;
+text-align: center;
+margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+.iniciarsesión{
+    width: 100%;
+    height: 45px;
+    border-radius: 55px;
+     background: rgba(255, 255, 255, 0.137);
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.iniciarsesión:hover{
+    box-shadow: 0px 0px 8px #ffffffa4;
+}

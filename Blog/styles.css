@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    
+}
+
+.blog-posts {
+    flex: 1;
+}
+
+.blog-post {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+aside {
+    flex: 0 0 25%;
+}
+
+.calendar {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+}
+* Estilos para el calendario */
+#calendar {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.month {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.prev-date,
+.next-date {
+    color: #999;
+}
+
+.today {
+    background-color: #333;
+    color: white;
+}
+
+
+.comments {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.comment-form textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+    resize: none;
+    margin-right: 10px;
+}
+
+.comment-form button {
+    width: 150px;
+}
+
+.comment {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-posts {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.calendar {
+    flex: 0 0 250px;
+    margin-right: 20px;
+}
+
+.comments {
+    flex: 1;
+}
+
